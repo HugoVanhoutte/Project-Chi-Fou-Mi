@@ -22,7 +22,8 @@ return random.innerText.toLowerCase();
 
 function getResult(userChoice, computerChoice){
     if(userChoice === computerChoice){
-    } else if((userChoice === "pierre" && computerChoice === "feuille") ||
+
+    } else if((userChoice === "pierre" && computerChoice === "ciseaux") ||
         (userChoice === "feuille" && computerChoice === "pierre")||
         (userChoice === "ciseaux" && computerChoice === "feuille")
     ){

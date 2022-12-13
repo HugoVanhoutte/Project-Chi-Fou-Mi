@@ -74,6 +74,7 @@ html {
 
         header h1 {
             font-size: xxx-large;
+            margin: 3rem;
         }
 
         header h2 {
@@ -81,8 +82,9 @@ html {
         }
 
         header p {
-            font-size: x-large;
+            font-size: xxx-large;
             font-family: 'Press Start 2P', monospace;
+            margin: 5rem;
         }
 
             header p #user-score {
@@ -139,6 +141,22 @@ html {
                 #game #computer-choice .choice:hover {
                     cursor: not-allowed;
                 }
+
+    #reset-score {
+        border: black 2px solid;
+        width: 10rem;
+        height: 5rem;
+        border-radius: 15px;
+        background-color: azure;
+    }
+    #reset-score:hover {
+         background-color: #d4fcfc;
+         cursor: pointer;
+     }
+    #reset-score:active {
+        box-shadow: grey inset 3px 3px;
+        background-color: #a7e3e3;
+    }
                 
                 
 @media screen and (max-width: 1000px) {
