@@ -30,7 +30,8 @@ function getResult(userChoice, computerChoice){
 
 function resetBorder() {
     for (const element of document.querySelectorAll(".choice")) {
-        element.style.border = "black dashed 2px"
+        element.style.border = "black dashed 2px";
+        element.style.backgroundColor = "azure";
     }
 }
 
