@@ -99,11 +99,19 @@ html {
         align-items: center;
         justify-content: space-around;
         width: 65%;
+        margin-top: 5rem;
     }
         #game section {
             display: flex;
-            justify-content: flex-start;
             width: 50%;
+        }
+
+        #game #user-choice {
+            justify-content: flex-start;
+        }
+
+        #game #computer-choice {
+            justify-content: flex-end;
         }
 
             #game section .choice {
@@ -128,3 +136,24 @@ html {
                 #game #computer-choice .choice:hover {
                     cursor: not-allowed;
                 }
+                
+                
+@media screen and (max-width: 1000px) {
+    #game {
+        flex-direction: column;
+    }
+        #game #user-choice {
+            justify-content: center;
+        }
+        #game #computer-choice {
+            justify-content: center;
+        }
+}
+
+@media screen and (max-width: 800px) {
+    #game {
+        width: 100%;
+    }
+    #game section {
+    }
+}

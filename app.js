@@ -28,6 +28,12 @@ function getResult(userChoice, computerChoice){
 
 }
 
+function resetBorder() {
+    for (const element of document.querySelectorAll(".choice")) {
+        element.style.border = "black dashed 2px"
+    }
+}
+
 let userStone = userChoices[0];
 let userPaper = userChoices[1];
 let userScissors = userChoices[2];
@@ -39,28 +45,25 @@ let computerChoice;
 
 userStone.addEventListener("click", () => {
     userChoice = "pierre";
+    resetBorder();
     userStone.style.border = "green 3px solid"
     setTimeout(() => userStone.style.border = "dashed 2px black", 2000);
-    userPaper.style.border = "dashed 2px black";
-    userScissors.style.border = "dashed 2px black";
     computerChoice = getRandom();
     getResult(userChoice, computerChoice);
 });
 userPaper.addEventListener("click", () => {
     userChoice = "feuille";
+    resetBorder();
     userPaper.style.border = "green 3px solid"
     setTimeout(() => userPaper.style.border = "dashed 2px black", 2000);
-    userScissors.style.border = "dashed 2px black";
-    userStone.style.border = "dashed 2px black";
     computerChoice = getRandom();
     getResult(userChoice, computerChoice);
 });
 userScissors.addEventListener("click", () =>{
     userChoice = "ciseaux";
+    resetBorder();
     userScissors.style.border = "green 3px solid"
     setTimeout(() => userScissors.style.border = "dashed 2px black", 2000);
-    userStone.style.border = "dashed 2px black";
-    userPaper.style.border = "dashed 2px black";
     computerChoice = getRandom();
     getResult(userChoice, computerChoice);
 });
