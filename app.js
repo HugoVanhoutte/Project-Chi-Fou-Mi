@@ -1,6 +1,11 @@
 let userChoices = document.querySelectorAll("#user-choice .choice");
+    let userStone = userChoices[0];
+    let userPaper = userChoices[1];
+    let userScissors = userChoices[2];
 let userScore = parseInt(document.getElementById("user-score").innerText);
 let computerScore = parseInt(document.getElementById("computer-score").innerText);
+let userChoice;
+let computerChoice;
 
 function getRandom(){
 
@@ -35,14 +40,12 @@ function resetBorder() {
     }
 }
 
-let userStone = userChoices[0];
-let userPaper = userChoices[1];
-let userScissors = userChoices[2];
-
-let userChoice;
-let computerChoice;
-
-
+function resetScore() {
+    userScore = 0;
+    computerScore = 0;
+    document.getElementById("user-score").innerText = userScore.toString();
+    document.getElementById("computer-score").innerText  = computerScore.toString();
+}
 
 userStone.addEventListener("click", () => {
     userChoice = "pierre";
@@ -68,3 +71,5 @@ userScissors.addEventListener("click", () =>{
     computerChoice = getRandom();
     getResult(userChoice, computerChoice);
 });
+
+document.getElementById("reset-score").addEventListener("click",resetScore);
