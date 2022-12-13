@@ -1,0 +1,129 @@
+/* RESET CSS*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*FIN RESET CSS*/
+/*CALIBRAGE PX/REM*/
+html {
+    font-size: 62.5%;
+}
+
+/*FIN CALIBRAGE PX/REM*/
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: Calibri, sans-serif;
+    }
+
+        header h1 {
+            font-size: xxx-large;
+        }
+
+        header h2 {
+            font-size: xx-large;
+        }
+
+        header p {
+            font-size: x-large;
+            font-family: 'Press Start 2P', monospace;
+        }
+
+            header p #user-score {
+                color: green;
+            }
+
+            header p #computer-score {
+                color: red;
+            }
+
+
+
+    #game {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 65%;
+    }
+        #game section {
+            display: flex;
+            justify-content: flex-start;
+            width: 50%;
+        }
+
+            #game section .choice {
+            width: 10rem;
+            height: 10rem;
+            margin: .5rem;
+            border: black 2px dashed;
+            border-radius: 15px;
+            background-color: azure;
+            }
+
+            
+                #game #user-choice .choice:hover {
+                    background-color: #c6e5ff;
+                    cursor: pointer;
+                }
+                #game #user-choice .choice:active {
+                    box-shadow: grey inset 3px 3px;
+                }
+
+                #game #computer-choice .choice:hover {
+                    cursor: not-allowed;
+                }
