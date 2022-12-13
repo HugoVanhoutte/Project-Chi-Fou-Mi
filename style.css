@@ -117,11 +117,12 @@ html {
 
             
                 #game #user-choice .choice:hover {
-                    background-color: #c6e5ff;
+                    background-color: #d4fcfc;
                     cursor: pointer;
                 }
                 #game #user-choice .choice:active {
                     box-shadow: grey inset 3px 3px;
+                    background-color: #a7e3e3;
                 }
 
                 #game #computer-choice .choice:hover {
