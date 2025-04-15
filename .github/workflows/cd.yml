@@ -41,7 +41,7 @@ jobs:
         port: 22
         source: "dist/**"
         strip_components: 1
-        target: "/var/www/shifumi.hugo-vanhoutte.dev/"
+        target: "/var/www/shifumi/public"
         
 #    - name: Execute SSH commands to move content
 #      uses: appleboy/ssh-action@v0.1.5
