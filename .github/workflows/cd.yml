@@ -24,7 +24,7 @@ jobs:
       with:
         host: ${{ secrets.FTP_HOST }}
         username: ${{ secrets.FTP_USER }}
-        password: ${{ secrets.SSH_PASSWORD }}
+        key: ${{ secrets.SSH_KEY }}
         port: 22
         script: |
           mv /var/www/shifumi/public/dist/* /var/www/shifumi/public/
@@ -37,21 +37,8 @@ jobs:
         debug: true
         host: ${{ secrets.FTP_HOST }}
         username: ${{ secrets.FTP_USER }}
-        password: ${{ secrets.SSH_PASSWORD }}
+        key: ${{ secrets.SSH_KEY }}
         port: 22
         source: "dist/**"
         strip_components: 1
         target: "/var/www/shifumi/public"
-        
-#    - name: Execute SSH commands to move content
-#      uses: appleboy/ssh-action@v0.1.5
-#      with:
-#        host: ${{ secrets.FTP_HOST }}
-#        username: ${{ secrets.FTP_USER }}
-#        key: ${{ secrets.SSH_KEY }}
-#        port: 22
-#        script: |
-#          # Move contents of dist to target directory
-#          mv /var/www/shifumi.hugo-vanhoutte.dev/dist/* /var/www/shifumi.hugo-vanhoutte.dev/
-#          # Remove the empty dist folder
-#          rmdir /var/www/shifumi.hugo-vanhoutte.dev/dist
